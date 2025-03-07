@@ -45,7 +45,7 @@ runs:
   
     - name: Create BOM directory
       run: mkdir -p bom
-     shell: bash 
+      shell: bash 
 
     - name: Create SBOM with CycloneDX
       uses: CycloneDX/gh-node-module-generatebom@v1
