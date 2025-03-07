@@ -28,7 +28,7 @@ name: Generate SBOM
 on:
   push:
     branches: [ "dev" ]
-  tags: [ 'v*.*.*' ]
+    tags: [ 'v*.*.*' ]
 
 jobs:
   build-and-upload:
