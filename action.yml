@@ -37,12 +37,15 @@ runs:
          
     - name: Install Yarn
       run: npm install -g yarn
+      shell: bash
           
     - name: Install packages
       run: yarn install --ignore-scripts
+      shell: bash
   
     - name: Create BOM directory
       run: mkdir -p bom
+     shell: bash 
 
     - name: Create SBOM with CycloneDX
       uses: CycloneDX/gh-node-module-generatebom@v1
