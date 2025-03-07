@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Generate and Upload SBOM
-      uses: your-username/your-action-repo@v1
+      uses: USEPA/ccte-sbom-generator-vue@main
       with:
         node_version: '20'
         server_hostname: 'ccte-api-dependency-track.epa.gov'
