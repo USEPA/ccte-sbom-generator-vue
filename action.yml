@@ -1,5 +1,7 @@
 name: Generate SBOM
 description: A GitHub Action to generate SBOM using CycloneDX and upload it to Dependency Track.
+permissions:
+  contents: read
 
 inputs:
   node_version:
