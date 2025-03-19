@@ -42,3 +42,5 @@ jobs:
         api_key: ${{ secrets.SECRET_OWASP_DT_KEY }}
         project_name: 'Your-Project-Name'
         project_version: ${{ github.ref_name }}
+        npmrc_content: |
+            registry=https://registry.npmjs.org/
