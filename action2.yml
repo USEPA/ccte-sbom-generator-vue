@@ -24,12 +24,28 @@ inputs:
     description: 'Filename for the BOM'
     required: false
     default: './bom/bom.xml'
+  npmrc_content:
+    description: 'Contents of the .npmrc file (optional)'
+    required: false
 
 runs:
   using: 'composite'
   steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      
+    - name: Create .npmrc File from Content
+      if: ${{ inputs.npmrc_content }}
+      run: |
+        echo "Creating .npmrc file from input content"
+        echo "${{ inputs.npmrc_content }}" > .npmrc
+        echo ".npmrc file created from input content"
+      shell: bash
+
+    - name: Contents of .npmrc
+      if: ${{ inputs.npmrc_content }}
+      run: cat .npmrc
+      shell: bash
       
     - name: Setup Node.js and npm
       uses: actions/setup-node@v4
