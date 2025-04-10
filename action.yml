@@ -69,9 +69,9 @@ runs:
       run: npm install -g yarn
       shell: bash
       
-    - name:  Install dependencies
-      run: yarn install
-      shell: bash
+    #- name:  Install dependencies
+     # run: yarn install
+     # shell: bash
 
     - name: Install packages with pnpm
       if: steps.check_pnpm.outputs.using_pnpm == 'true'
