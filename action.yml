@@ -82,7 +82,9 @@ runs:
 
     - name: Install packages with Yarn
       if: steps.check_pnpm.outputs.using_pnpm == 'false'
-      run: yarn install --ignore-scripts
+      run: |
+         yarn install
+         yarn install --ignore-scripts
       shell: bash
 
     - name: Create BOM directory
