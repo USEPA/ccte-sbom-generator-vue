@@ -28,6 +28,9 @@ inputs:
   npmrc_content:
     description: 'Contents of the .npmrc file (optional)'
     required: false
+  working-directory:
+    description: 'project directory'
+    required: false
 
 runs:
   using: 'composite'
@@ -118,3 +121,4 @@ runs:
         projectVersion: ${{ inputs.project_version }}
         bomFilename: ${{ inputs.bom_filename }}
         autoCreate: true
+        workingdirectory: ${{ inputs.working-directory }}
